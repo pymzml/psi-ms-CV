@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 4.1.22
-date: 25:01:2019 14:27
+data-version: 4.1.24
+date: 25:03:2019 16:28
 saved-by: Gerhard Mayer
 auto-generated-by: OBO-Edit 2.3.1
 import: http://ontologies.berkeleybop.org/pato.obo
@@ -6525,9 +6525,9 @@ is_a: MS:1001011 ! search database details
 [Term]
 id: MS:1001016
 name: database version
-def: "OBSOLETE: Use attribute in mzIdentML instead. Version of the search database." [PSI:PI]
+def: "Version of the search database. In mzIdentML use the attribute instead." [PSI:PI]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001011 ! search database details
-is_obsolete: true
 
 [Term]
 id: MS:1001017
@@ -19522,6 +19522,13 @@ id: MS:1003009
 name: Shimadzu Biotech LCD format
 def: "Shimadzu Biotech LCD file format." [PSI:PI]
 is_a: MS:1000560 ! mass spectrometer file format 
+
+[Term]
+id: MS:1003010
+name: LPPtiger
+def: "Software for lipidome-specific prediction and identification of oxidized phospholipids from LC-MS datasets." [PMID:29123162]
+is_a: MS:1002964 ! lipidomics analysis software
+is_a: MS:1001457 ! data processing software
 
 [Term]
 id: PEFF:0000001
