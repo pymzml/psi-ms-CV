@@ -4,8 +4,8 @@ saved-by: David Sparkman
 auto-generated-by: OBO-Edit 1.101
 default-namespace: MS
 remark: namespace: MS
-remark: version: 1.17.0
-remark: release date: 2009-02-24
+remark: version: 1.17.1
+remark: release date: 2009-03-04
 remark: coverage: Mass spectrometer output files
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: publisher: HUPO Proteomics Standards Initiative Mass Spectrometry Standards Working Group
@@ -5344,9 +5344,14 @@ relationship: has_units UO:0000012 ! kelvin
 [Term]
 id: MS:1000823
 name: Bruker U2 nativeID format
-def: "declaration=xsd:nonNegativeInteger collection=xsd:nonNegativeInteger scan=xsd:nonNegativeInteger" [PSI:MS]
+def: "declaration=xsd:nonNegativeInteger collection=xsd:nonNegativeInteger scan=xsd:nonNegativeInteger." [PSI:MS]
 is_a: MS:1000767 ! native spectrum identifier format
 
+[Term]
+id: MS:1000824
+name: no nativeID format
+def: "No nativeID format indicates that the file tagged with this term does not contain spectra that can have a nativeID format." [PSI:MS]
+is_a: MS:1000767 ! native spectrum identifier format
 
 [Typedef]
 id: has_units
