@@ -1,12 +1,12 @@
 format-version: 1.2
-date: 06:03:2011 14:05
-saved-by: dovelleiro
+date: 06:07:2011 15:05
+saved-by: edeutsch
 auto-generated-by: OBO-Edit 2.1-beta 13
 default-namespace: MS
 remark: namespace: MS
-data-version: 3.03.5
-remark: version: 3.03.5
-remark: release date: 2011-06-03
+data-version: 3.4.0
+remark: version: 3.4.0
+remark: release date: 2011-06-07
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -3875,45 +3875,45 @@ is_a: MS:1000560 ! mass spectrometer file format
 
 [Term]
 id: MS:1000585
-name: contact person attribute
-def: "Details about a person to contact in case of concern or dicussion about the file." [PSI:MS]
+name: contact attribute
+def: "Details about a person or organization to contact in case of concern or discussion about the file." [PSI:MS]
 is_a: MS:1000547 ! object attribute
 relationship: part_of MS:0000000 ! Proteomics Standards Initiative Mass Spectrometry Vocabularies
 
 [Term]
 id: MS:1000586
 name: contact name
-def: "Name of a contact person." [PSI:MS]
+def: "Name of the contact person or organization." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1000587
 name: contact address
-def: "Postal address of a contact person." [PSI:MS]
+def: "Postal address of the contact person or organization." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1000588
 name: contact URL
-def: "Uniform Resource Locator related to the contact person." [PSI:MS]
+def: "Uniform Resource Locator related to the contact person or organization." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1000589
 name: contact email
-def: "Email adress of the contact person." [PSI:MS]
+def: "Email address of the contact person or organization." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1000590
 name: contact organization
 def: "Home institution of the contact person." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1000591
@@ -5549,7 +5549,7 @@ relationship: has_units MS:1000040 ! m/z
 [Term]
 id: MS:1000828
 name: isolation window lower offset
-def: "The extent of the isolation window in m/z below the isolation window target m/z. The lower and upper offsets may be asymetric about the target m/z." [PSI:MS]
+def: "The extent of the isolation window in m/z below the isolation window target m/z. The lower and upper offsets may be asymmetric about the target m/z." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000792 ! isolation window attribute
 relationship: has_units MS:1000040 ! m/z
@@ -5557,7 +5557,7 @@ relationship: has_units MS:1000040 ! m/z
 [Term]
 id: MS:1000829
 name: isolation window upper offset
-def: "The extent of the isolation window in m/z above the isolation window target m/z. The lower and upper offsets may be asymetric about the target m/z." [PSI:MS]
+def: "The extent of the isolation window in m/z above the isolation window target m/z. The lower and upper offsets may be asymmetric about the target m/z." [PSI:MS]
 xref: value-type:xsd\:float "The allowed value-type for this CV term."
 is_a: MS:1000792 ! isolation window attribute
 relationship: has_units MS:1000040 ! m/z
@@ -6247,6 +6247,21 @@ id: MS:1000932
 name: AB SCIEX TripleTOF 5600
 def: "Applied Biosystems|MDS SCIEX TripleTOF 5500, a quadrupole - quadrupole - time-of-flight mass spectrometer." [PSI:MS]
 is_a: MS:1000121 ! AB SCIEX instrument model
+
+[Term]
+id: MS:1000933
+name: protein modifications
+def: "Encoding of modifications of the protein sequence from the specified accession, written in PEFF notation." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000884 ! protein attribute
+
+[Term]
+id: MS:1000934
+name: gene name
+def: "Name of the gene from which the protein is translated." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000884 ! protein attribute
+
 
 [Term]
 id: MS:1001000
@@ -7737,7 +7752,7 @@ is_a: MS:1001066 ! ions series considered in search
 id: MS:1001266
 name: role type
 def: "Role of a Person or Organization." [PSI:PI]
-is_a: MS:1000585 ! contact person attribute
+is_a: MS:1000585 ! contact attribute
 
 [Term]
 id: MS:1001267
@@ -10861,6 +10876,27 @@ name: ProteomeDiscoverer:Mascot:Please Do not Touch this
 def: "Unknown Mascot parameter which ProteomeDiscoverer uses for mascot searches." [PSI:MS]
 xref: value-type:xsd\:string "The allowed value-type for this CV term."
 is_a: MS:1001302 ! search engine specific input parameter
+
+[Term]
+id: MS:1001755
+name: contact phone number
+def: "Phone number of the contact person or organization." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000585 ! contact attribute
+
+[Term]
+id: MS:1001756
+name: contact fax number
+def: "Fax number for the contact person or organization." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000585 ! contact attribute
+
+[Term]
+id: MS:1001757
+name: contact toll-free phone number
+def: "Toll-free phone number of the contact person or organization." [PSI:MS]
+xref: value-type:xsd\:string "The allowed value-type for this CV term."
+is_a: MS:1000585 ! contact attribute
 
 [Typedef]
 id: has_regexp
