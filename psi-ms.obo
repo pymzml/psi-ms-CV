@@ -4,7 +4,7 @@ saved-by: edeutsch
 auto-generated-by: OBO-Edit 1.101
 default-namespace: MS
 remark: namespace: MS
-remark: version: 2.23.0
+remark: version: 2.23.1
 remark: release date: 2009-08-06
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
@@ -4065,7 +4065,7 @@ is_a: MS:1000560 ! mass spectrometer file format
 [Term]
 id: MS:1000615
 name: ProteoWizard
-def: "ProteoWizard software for data analysis. Currently developed and maintained by Darren Kessner at Parag Mallick's lab SFCAP at Cedars-Sinai." [PSI:MS]
+def: "ProteoWizard software for data analysis. Currently developed and maintained by Darren Kessner at Parag Mallick's lab (Center for Applied Molecular Medicine at the University of Southern California)." [PSI:MS]
 synonym: "pwiz" EXACT []
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
@@ -9159,6 +9159,27 @@ def: "This term can describe a neutral loss m/z value that is lost from an ion."
 xref: value-type:xsd\:double "The allowed value-type for this CV term."
 is_a: MS:1001471 ! peptide modification details
 relationship: has_units UO:0000221 ! dalton
+
+[Term]
+id: MS:1001526
+name: spectrum from database nativeID format
+def: "databasekey=xsd:Long" [PSI:MS]
+comment: A unique identifier of a spectrum stored in a database (e.g. a PRIMARY KEY identifier).
+is_a: MS:1000767 ! native spectrum identifier format
+
+[Term]
+id: MS:1001527
+name: Proteinscape spectra
+def: "Spectra from Bruker/Protagen Proteinscape database." [PSI:MS]
+is_a: MS:1000560 ! mass spectrometer file format
+
+[Term]
+id: MS:1001528
+name: Mascot query number
+def: "index=xsd:nonNegativeInteger" [PSI:MS]
+comment: The spectrum (query) number in a Mascot results file, starting from 1.
+is_a: MS:1000767 ! native spectrum identifier format
+is_a: MS:1001405 ! spectrum identification result details
 
 [Typedef]
 id: has_regexp
