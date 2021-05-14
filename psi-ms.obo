@@ -1,12 +1,15 @@
 format-version: 1.2
-date: 12:07:2011 11:01
+date: 12:07:2011 11:05
 saved-by: david ovelleiro
 auto-generated-by: OBO-Edit 2.1-beta 13
 default-namespace: MS
 remark: namespace: MS
-data-version: 3.7.1
-remark: version: 3.7.1
+data-version: 3.7.2
+remark: version: 3.7.2
 remark: release date: 2011-07-12
+remark: increment 'x' when a first level term is renamed, added, deleted, or rearranged in the structure.
+remark: increment 'y' when any other term is added or obsoleted.
+remark: increment 'z' when a term name, definition, or relationship is edited.
 remark: coverage: Mass spectrometer output files and spectra interpretation
 remark: creator: Matt Chambers <matt.chambers <-at-> vanderbilt.edu>
 remark: creator: Andreas Bertsch <bertsch <-at-> informatik.uni-tuebingen.de>
@@ -1767,7 +1770,7 @@ is_a: MS:1000293 ! mass spectrometer
 
 [Term]
 id: MS:1001797
-name: Travelling wave ion mobility mass spectrometer
+name: travelling wave ion mobility mass spectrometer
 def: "An ion mobility mass spectrometry technique based on the superimposition of travelling voltage waves on a radially-confining RF voltage in a gas-filled, stacked-ring ion guide." [PSI:MS]
 synonym: "TWIMS" EXACT []
 is_a: MS:1000261 ! ion mobility spectrometry
@@ -3996,14 +3999,6 @@ is_a: MS:1001457 ! data processing software
 id: MS:1000601
 name: ProteinLynx Global Server
 def: "Waters software for data analysis." [PSI:MS]
-is_a: MS:1000694 ! Waters software
-is_a: MS:1001456 ! analysis software
-is_a: MS:1001457 ! data processing software
-
-[Term]
-id: MS:1001794
-name: MassLynx
-def: "Waters software for Mass spectrometry acquisition, processing and data analysis." [PSI:MS]
 is_a: MS:1000694 ! Waters software
 is_a: MS:1001456 ! analysis software
 is_a: MS:1001457 ! data processing software
